@@ -10,7 +10,7 @@ RUN curl -sSO https://raw.githubusercontent.com/pote/gpm/v1.4.0/bin/gpm && \
 ADD . $GOPATH/src/github.com/linkedin/Burrow
 RUN cd $GOPATH/src/github.com/linkedin/Burrow && gpm install && go install && mv $GOPATH/bin/Burrow $GOPATH/bin/burrow
 
-ADD docker-config /etc/burrow
+ADD config /etc/burrow
 
 WORKDIR /var/tmp/burrow
 
